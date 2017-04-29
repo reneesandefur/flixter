@@ -18,12 +18,12 @@ class Instructor::SectionsController < ApplicationController
           render plain: "Unauthorized user", status: :unauthorized
         end
     end
-    
+   
     helper_method :current_course
     def current_course 
        @current_course ||= Course.find(params[:course_id])
     end
-    
+   
     def section_params
         params.require(:section).permit(:title)
     end
