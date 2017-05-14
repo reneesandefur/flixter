@@ -66,3 +66,4 @@ gem 'jquery-ui-rails'
 source 'https://rails-assets.org' do  
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+gem 'font-awesome-rails'
