@@ -35,8 +35,8 @@
               </li>
             <% end %>
           </ul>
-      </div>
-    </nav>
+        </div>
+      </nav>
     
     <% if notice.present? %>
       <p class="notice"><%= notice %></p>
@@ -46,13 +46,45 @@
     <% end %>
     <%= yield %>
     
-    <footer id="footer">
-      <div class="container">
-        <b>Teachers</b>
-        <br />
-        <%= link_to 'Teach a Course', new_instructor_course_path %>
-      </div>
-    </footer>
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-3">
+              <b>Teachers</b>
+              <br />
+              <%= link_to 'Teach a Course', new_instructor_course_path %>
+              <br />
+              <% link_to 'My Dashboard', dashboard_path %>
+            </div>
+            <div class="col-12 col-sm-2">
+              <b>About</b>
+              <br />
+              <%= link_to 'Team', '#' %>
+              <br />
+              <%= link_to 'Careers', '#' %>
+              <br />
+              <%= link_to 'Privacy Policy', '#' %>
+            </div>
+            <div class="col-12 col-sm-4">
+              <b>Contact</b>
+              <br />
+              reneersandefur@gmail.com
+              <br />
+              Miami, FL
+            </div>
+            <div class="col-12 col-sm-3 social">
+              <b>Social</b>
+              <br />
+              <br />
+              <%= link_to 'https://github.com/ReneeSandefur' do %>
+                <span class="fa fa-github-square fa-2x social-button"></span>
+              <% end %>
+              <span class="fa fa-facebook-square fa-2x social-button"></span>
+              <span class="fa fa-twitter-square fa-2x social-button"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
     <script src="//vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>
