@@ -48,12 +48,13 @@
       <% current_course.sections.rank(:row_order).each do |section| %>
         <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">
           <div class="row">
-            <div class="header col-8">
+            <div class="header col-8 col-xs-12">
               <span class="fa fa-ellipsis-v"></span>
               <%= section.title %>
             </div>
+            <br />
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary float-right new-lesson-button col-4" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+            <button type="button" class="btn btn-primary new-lesson-button col-4 col-xs-12" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
               New Lesson...
             </button>
           </div>
